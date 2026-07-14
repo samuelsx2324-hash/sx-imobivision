@@ -104,16 +104,19 @@ Edite o arquivo `script.js`.
    - `casa-hero.jpg`
    - `sala-antes.jpg`
    - `sala-depois.jpg`
-4. No `styles.css`, procure por `images.unsplash.com`.
-5. Troque a URL externa pelo caminho local, por exemplo:
+4. No `styles.css`, procure por `image-exterior-before`, `image-exterior-after`, `image-living-before`, `image-living-after`, `image-interior-before` e `image-interior-after`.
+5. Troque o nome dos arquivos pelos seus, por exemplo:
 
 ```css
-.image-house {
-  background-image: url('assets/images/casa-hero.jpg');
-}
+.image-exterior-before { background-image: url('assets/images/fachada-antes.jpg'); }
+.image-exterior-after { background-image: url('assets/images/fachada-depois.jpg'); }
 ```
 
-Para o antes e depois, use exatamente o mesmo imóvel e aplique somente os ajustes permitidos. Não use imagens que mostrem casas diferentes como se fossem uma transformação.
+Para o antes e depois, as duas imagens precisam vir da mesma fotografia e manter fachada, janelas, móveis, planta e enquadramento reconhecíveis. A versão nova deve corrigir luz, cor, nitidez e perspectiva, sem gerar outra casa.
+
+### Trocar a logo
+
+A logo atual está em `assets/images/sx-imobivision-logo.png`. Para atualizá-la, substitua esse arquivo mantendo exatamente o mesmo nome.
 
 ## Parte 9 — Colocar um vídeo real
 

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <script src="script.js" defer></script>
@@ -19,8 +20,7 @@
   <header class="site-header" id="topo">
     <div class="container header-inner">
       <a class="brand" href="#topo" aria-label="SX ImobiVision - início">
-        <span class="brand-mark">SX</span>
-        <span class="brand-name">SX ImobiVision</span>
+        <img class="brand-logo" src="assets/images/sx-imobivision-logo.png" alt="SX ImobiVision" />
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -71,20 +71,20 @@
           <div class="showcase-head">
             <div>
               <small>Projeto residencial</small>
-              <h2>Casa contemporânea</h2>
-              <p>Exemplo demonstrativo</p>
+              <h2>Fachada residencial</h2>
+              <p>Mesma fotografia, apresentação aprimorada</p>
             </div>
-            <span class="status-chip"><i data-lucide="shield-check"></i> Fiel ao original</span>
+            <span class="status-chip"><i data-lucide="shield-check"></i> Estrutura preservada</span>
           </div>
 
           <div class="showcase-media">
-            <div class="showcase-main-image media-image" role="img" aria-label="Casa contemporânea iluminada ao anoitecer"></div>
+            <div class="showcase-main-image media-image" role="img" aria-label="Foto aprimorada da mesma fachada, com luz e nitidez corrigidas"></div>
             <button class="play-button demo-video-button" type="button" aria-label="Reproduzir demonstração"><i data-lucide="play"></i></button>
 
             <div class="mini-before-after">
               <p>Antes e depois</p>
-              <div class="mini-image before media-image"><span>Antes</span></div>
-              <div class="mini-image after media-image"><span>Depois</span></div>
+              <div class="mini-image before media-image"><span>Antes: escura e desfocada</span></div>
+              <div class="mini-image after media-image"><span>Depois: luz e nitidez</span></div>
             </div>
           </div>
 
@@ -121,7 +121,7 @@
         <div class="service-grid">
           <article class="service-card blue reveal">
             <span class="icon-box"><i data-lucide="image"></i></span>
-            <div><h3>Fotos melhoradas com IA</h3><p>Correção de luz, cor, nitidez, perspectiva e enquadramento sem mudar a estrutura real do imóvel.</p></div>
+            <div><h3>Fotos melhoradas com IA</h3><p>Correção de luz, cor, nitidez, perspectiva e enquadramento usando a mesma foto, sem redesenhar ou modificar a casa.</p></div>
           </article>
           <article class="service-card green reveal">
             <span class="icon-box"><i data-lucide="clapperboard"></i></span>
@@ -129,7 +129,7 @@
           </article>
           <article class="service-card orange reveal">
             <span class="icon-box"><i data-lucide="columns-2"></i></span>
-            <div><h3>Antes e depois</h3><p>Comparações visuais para demonstrar a melhoria na apresentação sem criar características inexistentes.</p></div>
+            <div><h3>Antes e depois</h3><p>Comparações da mesma fotografia para mostrar o ganho de qualidade sem trocar fachada, móveis, janelas ou ambientes.</p></div>
           </article>
           <article class="service-card purple reveal">
             <span class="icon-box"><i data-lucide="smartphone"></i></span>
@@ -156,7 +156,7 @@
         <div class="fidelity-copy reveal">
           <p class="eyebrow">O IMÓVEL CONTINUA SENDO O MESMO</p>
           <h2>Melhoria visual sem alterar características reais</h2>
-          <p>O trabalho é realizado com base na foto original enviada. A casa, o apartamento, os ambientes e os elementos estruturais permanecem fiéis à realidade.</p>
+          <p>O trabalho parte exatamente da foto original enviada. A casa, a fachada, as janelas, os ambientes, os móveis e os elementos estruturais continuam os mesmos; corrigimos somente a apresentação visual.</p>
           <div class="do-dont-grid">
             <div class="do-box">
               <h3><i data-lucide="circle-check-big"></i> Podemos melhorar</h3>
@@ -210,43 +210,43 @@
 
         <div class="portfolio-grid">
           <article class="comparison-card reveal" data-label="Sala de estar">
-            <div class="comparison" data-before="assets/images/living-room.jpg" data-after="assets/images/living-room.jpg">
-              <div class="comparison-image comparison-before image-living"></div>
-              <div class="comparison-image comparison-after image-living enhanced"></div>
+            <div class="comparison">
+              <div class="comparison-image comparison-before image-living-before"></div>
+              <div class="comparison-image comparison-after image-living-after"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da sala de estar" />
               <div class="comparison-handle"><i data-lucide="move-horizontal"></i></div>
             </div>
-            <div class="comparison-footer"><span>Sala de estar</span><small>Luz, cor e nitidez</small></div>
+            <div class="comparison-footer"><span>Sala de estar</span><small>Mesma foto • luz e nitidez</small></div>
           </article>
 
           <article class="comparison-card reveal" data-label="Fachada">
             <div class="comparison">
-              <div class="comparison-image comparison-before image-house"></div>
-              <div class="comparison-image comparison-after image-house enhanced"></div>
+              <div class="comparison-image comparison-before image-exterior-before"></div>
+              <div class="comparison-image comparison-after image-exterior-after"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da fachada" />
               <div class="comparison-handle"><i data-lucide="move-horizontal"></i></div>
             </div>
-            <div class="comparison-footer"><span>Fachada</span><small>Exposição e contraste</small></div>
+            <div class="comparison-footer"><span>Fachada</span><small>Mesma casa • exposição corrigida</small></div>
           </article>
 
           <article class="comparison-card reveal" data-label="Ambiente interno">
             <div class="comparison">
-              <div class="comparison-image comparison-before image-interior"></div>
-              <div class="comparison-image comparison-after image-interior enhanced"></div>
+              <div class="comparison-image comparison-before image-interior-before"></div>
+              <div class="comparison-image comparison-after image-interior-after"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do ambiente interno" />
               <div class="comparison-handle"><i data-lucide="move-horizontal"></i></div>
             </div>
-            <div class="comparison-footer"><span>Ambiente interno</span><small>Perspectiva e equilíbrio</small></div>
+            <div class="comparison-footer"><span>Ambiente interno</span><small>Mesmo ambiente • cores equilibradas</small></div>
           </article>
 
           <article class="video-card reveal">
-            <div class="video-preview image-house">
+            <div class="video-preview image-exterior-after">
               <button class="play-button demo-video-button" type="button" aria-label="Abrir prévia do vídeo cinematográfico"><i data-lucide="play"></i></button>
               <span>Prévia para Reels</span>
             </div>
@@ -268,7 +268,7 @@
           <article class="deliverable reveal"><i data-lucide="panels-top-left"></i><h3>Carrosséis e Stories</h3><p>Capas, chamadas, destaques e sequência de ambientes.</p></article>
           <article class="deliverable reveal"><i data-lucide="megaphone"></i><h3>Anúncios pagos</h3><p>Peças diretas para campanhas de captação e venda.</p></article>
           <article class="deliverable reveal"><i data-lucide="map-pinned"></i><h3>Localização e entorno</h3><p>Mapas, pontos de interesse e informações confirmadas.</p></article>
-          <article class="deliverable reveal"><i data-lucide="badge"></i><h3>White label</h3><p>Entrega sem nossa marca para agências e parceiros.</p></article>
+          <article class="deliverable reveal"><i data-lucide="badge-white-label"></i><h3>White label</h3><p>Entrega sem nossa marca para agências e parceiros.</p></article>
         </div>
       </div>
     </section>
@@ -476,7 +476,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="#topo"><span class="brand-mark">SX</span><span class="brand-name">SX ImobiVision</span></a>
+        <a class="brand" href="#topo" aria-label="SX ImobiVision - início"><img class="brand-logo footer-logo" src="assets/images/sx-imobivision-logo.png" alt="SX ImobiVision" /></a>
         <p>Soluções visuais com IA para imobiliárias que querem apresentar imóveis com mais qualidade e consistência.</p>
       </div>
       <div><h3>Navegação</h3><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#planos">Planos</a></div>
@@ -490,11 +490,10 @@
 
   <dialog class="video-modal" id="video-modal">
     <button class="modal-close" type="button" aria-label="Fechar"><i data-lucide="x"></i></button>
-    <div class="mock-video image-house">
+    <div class="mock-video image-exterior-after">
       <div class="mock-video-overlay">
         <span>DEMONSTRAÇÃO</span>
         <h2>Vídeo cinematográfico para imóvel</h2>
-        <p>Substitua esta prévia por um arquivo MP4 real quando tiver seus primeiros projetos.</p>
       </div>
     </div>
   </dialog>

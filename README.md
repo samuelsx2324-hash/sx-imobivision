@@ -14,23 +14,20 @@ Site responsivo em HTML, CSS e JavaScript, pronto para GitHub e Netlify.
 
 ## Atenção sobre as imagens
 
-O modelo usa imagens demonstrativas externas do Unsplash. Antes de iniciar a prospecção, substitua pelos seus próprios projetos ou por fotos autorizadas.
-
-Para usar arquivos locais, coloque as imagens em `assets/images/` e altere no `styles.css` as linhas que possuem `images.unsplash.com`.
+O modelo agora usa arquivos locais de demonstração. Cada comparação foi criada a partir da mesma fotografia: a versão “antes” simula baixa luz e desfoque, e a versão “depois” corrige apresentação sem mudar a estrutura do imóvel. Antes de iniciar a prospecção, substitua por projetos próprios ou fotos autorizadas.
 
 Sugestões de nomes:
 
-- `hero-house.jpg`
-- `living-room.jpg`
-- `interior.jpg`
-- `modern-house.jpg`
+- `exterior-before.jpg` e `exterior-after.jpg`
+- `living-before.jpg` e `living-after.jpg`
+- `interior-before.jpg` e `interior-after.jpg`
+- `sx-imobivision-logo.png`
 
 Exemplo:
 
 ```css
-.image-house {
-  background-image: url('assets/images/hero-house.jpg');
-}
+.image-exterior-before { background-image: url('assets/images/fachada-antes.jpg'); }
+.image-exterior-after { background-image: url('assets/images/fachada-depois.jpg'); }
 ```
 
 ## Formulário Netlify

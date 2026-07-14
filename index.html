@@ -78,13 +78,13 @@
           </div>
 
           <div class="showcase-media">
-            <div class="showcase-main-image media-image" role="img" aria-label="Foto aprimorada da mesma fachada, com luz e nitidez corrigidas"></div>
+            <div class="showcase-main-image media-image" role="img" aria-label="Foto aprimorada da mesma fachada, com luz e nitidez corrigidas" style="background-image: linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.16)), url('assets/images/exterior-after.jpg');"></div>
             <button class="play-button demo-video-button" type="button" aria-label="Reproduzir demonstração"><i data-lucide="play"></i></button>
 
             <div class="mini-before-after">
               <p>Antes e depois</p>
-              <div class="mini-image before media-image"><span>Antes: escura e desfocada</span></div>
-              <div class="mini-image after media-image"><span>Depois: luz e nitidez</span></div>
+              <div class="mini-image before media-image" style="background-image: url('assets/images/exterior-before.jpg');"><span>Antes: escura e desfocada</span></div>
+              <div class="mini-image after media-image" style="background-image: url('assets/images/exterior-after.jpg');"><span>Depois: luz e nitidez</span></div>
             </div>
           </div>
 
@@ -211,8 +211,8 @@
         <div class="portfolio-grid">
           <article class="comparison-card reveal" data-label="Sala de estar">
             <div class="comparison">
-              <div class="comparison-image comparison-before image-living-before"></div>
-              <div class="comparison-image comparison-after image-living-after"></div>
+              <div class="comparison-image comparison-before image-living-before" style="background-image: url('assets/images/living-before.jpg');"></div>
+              <div class="comparison-image comparison-after image-living-after" style="background-image: url('assets/images/living-after.jpg');"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da sala de estar" />
@@ -223,8 +223,8 @@
 
           <article class="comparison-card reveal" data-label="Fachada">
             <div class="comparison">
-              <div class="comparison-image comparison-before image-exterior-before"></div>
-              <div class="comparison-image comparison-after image-exterior-after"></div>
+              <div class="comparison-image comparison-before image-exterior-before" style="background-image: url('assets/images/exterior-before.jpg');"></div>
+              <div class="comparison-image comparison-after image-exterior-after" style="background-image: url('assets/images/exterior-after.jpg');"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da fachada" />
@@ -235,8 +235,8 @@
 
           <article class="comparison-card reveal" data-label="Ambiente interno">
             <div class="comparison">
-              <div class="comparison-image comparison-before image-interior-before"></div>
-              <div class="comparison-image comparison-after image-interior-after"></div>
+              <div class="comparison-image comparison-before image-interior-before" style="background-image: url('assets/images/interior-before.jpg');"></div>
+              <div class="comparison-image comparison-after image-interior-after" style="background-image: url('assets/images/interior-after.jpg');"></div>
               <span class="comparison-tag before-tag">Antes</span>
               <span class="comparison-tag after-tag">Depois</span>
               <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do ambiente interno" />
@@ -246,7 +246,7 @@
           </article>
 
           <article class="video-card reveal">
-            <div class="video-preview image-exterior-after">
+            <div class="video-preview image-exterior-after" style="background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.34)), url('assets/images/reel-cover.jpg');">
               <button class="play-button demo-video-button" type="button" aria-label="Abrir prévia do vídeo cinematográfico"><i data-lucide="play"></i></button>
               <span>Prévia para Reels</span>
             </div>
@@ -490,10 +490,15 @@
 
   <dialog class="video-modal" id="video-modal">
     <button class="modal-close" type="button" aria-label="Fechar"><i data-lucide="x"></i></button>
-    <div class="mock-video image-exterior-after">
-      <div class="mock-video-overlay">
+    <div class="video-modal-media">
+      <video id="demo-video" class="demo-video" controls playsinline preload="metadata" poster="assets/images/reel-cover.jpg">
+        <source src="assets/videos/demo-imovel.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo em HTML5.
+      </video>
+      <div class="video-modal-caption">
         <span>DEMONSTRAÇÃO</span>
         <h2>Vídeo cinematográfico para imóvel</h2>
+        <p>Prévia ilustrativa criada com fotos aprimoradas do mesmo imóvel, pensada para Reels, anúncios e apresentações.</p>
       </div>
     </div>
   </dialog>

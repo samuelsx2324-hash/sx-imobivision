@@ -173,7 +173,7 @@ button { color: inherit; }
 .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .comparison-card, .video-card { border: 1px solid var(--line); background: #090d13; border-radius: 14px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,.25); }
 .comparison { height: 230px; position: relative; overflow: hidden; --position: 50%; }
-.comparison-image { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.comparison-image { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
 .comparison-before { filter: none; }
 .comparison-after { clip-path: inset(0 0 0 var(--position)); }
 .enhanced { filter: none; }
@@ -186,7 +186,7 @@ button { color: inherit; }
 .comparison-footer { padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .comparison-footer span { font-weight: 700; font-size: .82rem; }
 .comparison-footer small { color: var(--muted); }
-.video-preview { height: 230px; position: relative; display: grid; place-items: center; overflow: hidden; }
+.video-preview { height: 230px; position: relative; display: grid; place-items: center; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; }
 .video-preview::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,0,0,.5)); }
 .video-preview .play-button { position: relative; z-index: 2; }
 .video-preview > span { position: absolute; left: 10px; bottom: 10px; font-size: .68rem; background: rgba(0,0,0,.72); padding: 5px 8px; border-radius: 5px; z-index: 2; }
@@ -278,16 +278,15 @@ details p { color: var(--muted); font-size: .78rem; margin: 0 0 16px; }
 
 .floating-whatsapp { position: fixed; right: 22px; bottom: 22px; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: #12c765; box-shadow: 0 12px 35px rgba(0,199,96,.35); z-index: 900; }
 .floating-whatsapp svg { width: 28px; }
-.video-modal { width: min(900px, calc(100% - 28px)); border: 1px solid rgba(255,255,255,.18); border-radius: 18px; padding: 0; background: #070a0f; color: white; box-shadow: 0 30px 90px rgba(0,0,0,.75); overflow: visible; }
+.video-modal { width: min(1020px, calc(100% - 28px)); border: 1px solid rgba(255,255,255,.18); border-radius: 18px; padding: 0; background: #070a0f; color: white; box-shadow: 0 30px 90px rgba(0,0,0,.75); overflow: visible; }
 .video-modal::backdrop { background: rgba(0,0,0,.8); backdrop-filter: blur(8px); }
 .modal-close { position: absolute; right: -12px; top: -12px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: white; color: black; border: 0; cursor: pointer; z-index: 2; }
-.mock-video { aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; position: relative; animation: cinematicPan 8s ease-in-out infinite alternate; background-size: 120%; }
-.mock-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.8), transparent 70%); }
-.mock-video-overlay { position: absolute; z-index: 2; left: 6%; bottom: 10%; max-width: 440px; }
-.mock-video-overlay span { color: #5ba3ff; letter-spacing: .15em; font-size: .7rem; font-weight: 800; }
-.mock-video-overlay h2 { font: 800 clamp(1.6rem,4vw,3rem)/1.1 "Manrope"; margin: 9px 0; }
-.mock-video-overlay p { color: #c5ced9; }
-@keyframes cinematicPan { from { background-position: 30% center; } to { background-position: 70% center; } }
+.video-modal-media { position: relative; }
+.demo-video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 18px; background: #020406; object-fit: cover; }
+.video-modal-caption { position: absolute; left: 5%; right: 5%; bottom: 5%; max-width: 520px; padding: 22px 24px; border-radius: 14px; background: linear-gradient(180deg, rgba(4,7,11,.18), rgba(4,7,11,.78)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.12); }
+.video-modal-caption span { color: #5ba3ff; letter-spacing: .15em; font-size: .7rem; font-weight: 800; }
+.video-modal-caption h2 { font: 800 clamp(1.6rem,4vw,3rem)/1.1 "Manrope"; margin: 9px 0; }
+.video-modal-caption p { color: #d1d8e2; margin: 0; font-size: .88rem; }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -360,4 +359,9 @@ details p { color: var(--muted); font-size: .78rem; margin: 0 0 16px; }
   .cta-image { display: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; }
+}
+
+@media (max-width: 700px) {
+  .video-modal-caption { position: static; max-width: none; border-radius: 0 0 18px 18px; padding: 18px; }
+  .demo-video { border-radius: 18px 18px 0 0; }
 }

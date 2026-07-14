@@ -54,12 +54,29 @@ window.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => sectionObserver.observe(section));
 
   const modal = qs('#video-modal');
-  qsa('.demo-video-button').forEach(button => button.addEventListener('click', () => modal?.showModal()));
-  qs('.modal-close')?.addEventListener('click', () => modal.close());
+  const demoVideo = qs('#demo-video');
+  const openModal = () => {
+    if (!modal) return;
+    modal.showModal();
+    if (demoVideo) {
+      demoVideo.currentTime = 0;
+      demoVideo.play().catch(() => {});
+    }
+  };
+  const closeModal = () => {
+    if (!modal) return;
+    if (demoVideo) {
+      demoVideo.pause();
+      demoVideo.currentTime = 0;
+    }
+    modal.close();
+  };
+  qsa('.demo-video-button').forEach(button => button.addEventListener('click', openModal));
+  qs('.modal-close')?.addEventListener('click', closeModal);
   modal?.addEventListener('click', event => {
     const rect = modal.getBoundingClientRect();
     const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
-    if (!inside) modal.close();
+    if (!inside) closeModal();
   });
 
   const simProperties = qs('#sim-properties');
